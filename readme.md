@@ -80,3 +80,22 @@
     │        OR
     └── loginUser.rejected  → error: "Invalid username or email"
 
+- **useAppSelector** -  reads data from store. 
+- It takes a function (selector) that receives the entire state and returns the piece of state you want.
+- const user = useAppSelector((state)=>state.auth.user) - this is how you read the user data from the store in a component.
+- Every time that piece of state changes, React auto re-renders the component.
+
+- **useAppDispatch** - gives you the dispatch function. You use it to send acxtions to the store - both sync and async thunks.
+
+- const dispatch = useAppDispatch();
+- sync action (defined in reduces:{})
+- dispatch(logout()) - this will trigger the logout reducer, which sets user to null and isAuthenticated to false.
+- async thunk (defined with createAsyncThunk)
+- dispatch(loginUser({username: "Bret", email: "Sincere@april.biz"}))
+- When you dispatch a thunk, redux toolkit fires the async function, and as it progresses through the states, the stores updates, and any component reading that state re-renders automatically
+
+
+
+
+
+
