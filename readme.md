@@ -1,5 +1,5 @@
 # Reduxjs/toolkit - manages the state
-- Gives you createSlice, createAsyncThunk, configureStore
+- Gives you createSlice, createAsyncThunk, configureStore.
 
 # React-Redux - connects React components to the Redux store
 - lets your components read and update the states
